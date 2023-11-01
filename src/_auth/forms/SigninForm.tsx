@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { account } from '../../lib/appwrite/config';
+import { useNavigate } from 'react-router-dom';
 
 
 const SigninForm =  () => {
+
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -10,6 +13,7 @@ const SigninForm =  () => {
   async function login(email: string, password: string) {
     const user = await account.createEmailSession(email, password)
     console.log("utilisateur", user)
+    navigate('/')
   }
 
   return (

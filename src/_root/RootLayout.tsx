@@ -1,9 +1,16 @@
+
+
 import { Outlet } from "react-router-dom"
+import Topbar from "../components/navigation/Topbar"
 const RootLayout = () => {
+
+
+
+
   return (
     <div>
         
-      <div>topbar</div>
+      <Topbar />
 
       <section className=" w-screen h-[80vh] bg-slate-300 ">
         <Outlet />
