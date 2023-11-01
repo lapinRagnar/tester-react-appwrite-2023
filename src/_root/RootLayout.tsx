@@ -5,7 +5,7 @@ const RootLayout = () => {
         
       <div>topbar</div>
 
-      <section >
+      <section className=" w-screen h-[80vh] bg-slate-300 ">
         <Outlet />
       </section>
 
