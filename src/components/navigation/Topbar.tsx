@@ -16,13 +16,38 @@ const Topbar = () => {
       <div>
         LapinRagnar
       </div>
-      <button onClick={handleLogout}>
-        <img 
-          src="/assets/icons/logout.svg"
-          width={50}
-          height={50}
-        />
-      </button>
+
+      <div className="flex items-center justify-center gap-10">
+        <button className="flex flex-row items-center justify-center gap-2" onClick={() => navigate('/sign-up')}>
+          <img 
+            src="/assets/icons/signup.svg"
+            width={30}
+            height={30}
+          />
+          <div className="text-xs hover:text-sm hover:text-green-300">
+            Register
+          </div>
+        </button>
+        <button className="flex flex-row items-center justify-center gap-2" onClick={() => navigate('/sign-in')}>
+          <img 
+            src="/assets/icons/signin.svg"
+            width={30}
+            height={30}
+          />
+          <div className="text-xs hover:text-sm hover:text-green-300">
+            Login
+          </div>
+        </button>
+        <button onClick={handleLogout}>
+          <img 
+            src="/assets/icons/logout.svg"
+            width={30}
+            height={30}
+          />
+        </button>
+
+      </div>
+
     </nav>
   )
 }
